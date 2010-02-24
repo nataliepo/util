@@ -1,0 +1,51 @@
+[1] 02/21/10
+
+* downloaded WP 2.9.2
+
+* had to install php on leopard 
+** http://foundationphp.com/tutorials/php_leopard.php was very useful
+** once I restarted apache, i was able to run the php files.
+
+* added /usr/local/mysql/bin/mysql to my PATH var:
+** export PATH=/lots/of/paths:/more/paths:/usr/local/mysql/bin/mysql
+
+* then, had to modify the default mysql socket that php looks for!
+** http://foolswisdom.com/mac-wordpress-error-establishing-a-database-connection/
+** changed 
+	;mysql.default_socket = /var/mysql/mysql.sock
+to 
+	mysql.default_socket = /tmp/mysql.sock
+And I was up and running!
+
+* username: admin, pwd: natalie
+
+IDEAS:
+* a widget that shows my most recent TypePad activity, just like my Twitter widgetizer
+* moving serious nataliepo.typepad.com posts over to my nataliepo.com blog
+* making my nataliepo.com serve content directly out of a typepad blog
+
+
+[2] 02/22/10
+* starting in the AM to investigate how the Twitter sidebar widget was created.
+* started a github project called 'Tydget' for a Typepad Widget as a sidebar.
+
+* investigating the User definitions in Motion:
+** /Library/Python/2.6/site-packages/typepadapp-1.0.2-py2.6egg/typepadapp/models/ defines the objects in the Typepad app; Motion extends these models and makes its own template tags from there.
+** /Library/Python/2.6/site-packages/typepad-1.0-py2.6.egg/typepad/api.py defines how all of the api endpoints are called in Motion.
+
+* back to JSON docs again: http://api.jquery.com/jQuery.getJSON/
+
+LEFT TO DO:
+*Having a hard time getting Javascript/JSON/JQuery working in a standard html page.  Should do this in Django, instead.
+
+http://api.typepad.com/users/6p00e5539faa3b8833/events.json?max-results=5 is what I want to work wtih.  http://docs.djangoproject.com/en/dev/ref/request-response/ is probably a good place to start.
+
+PICKING UP AGAIN:
+* having fun with Django tonight.  already got a view working!!!
+
+nataliepos XID = 6p00e5539faa3b8833
+
+
+Found a resource (http://pkarl.com/articles/how-we-built-feed-apart-using-django-twitter-and-f/) that shows how they build a Django aggregator, but i dont understand how Django makes API requests.
+
+Also useful: http://uswaretech.com/blog/2009/02/how-we-built-a-twitter-application/
