@@ -49,3 +49,43 @@ nataliepos XID = 6p00e5539faa3b8833
 Found a resource (http://pkarl.com/articles/how-we-built-feed-apart-using-django-twitter-and-f/) that shows how they build a Django aggregator, but i dont understand how Django makes API requests.
 
 Also useful: http://uswaretech.com/blog/2009/02/how-we-built-a-twitter-application/
+
+[3] 2/23/10
+<< MISSING NOTES >>
+
+[4] 2/24/10
+<< MISSING NOTES >>
+
+[5] 2/25/10
+
+2/25/10
+
+OPEN QUESTIONS:
+
+typepad_api_url = 'http://api.typepad.com/users/%s/events.json?max-results=5' % natalies_xid
+
+This pulls all of my events, but this
+
+typepad_api_url = 'http://api.typepad.com/groups/%s/events.json?max-results=5&start-index=1' % mmmeows_group_xid
+
+pulls only 5 events from mmmeow. Why?
+
+[6] 2/26/10
+<< MISSING ENTRY >>
+
+
+[7] 2/27/10
+
+This day went to TPM to write the MostRecc plugin to avoid costly sql queries for most recent favorites over thousands of blogs in one category
+
+[8] 2/28/10
+
+Continued TPM work and a good-bye party for Tracie and Wayne. :(
+
+[9] 03/01/10
+
+Tested the MostRecc plugin in TPM's env and deployed in the evening.  
+
+Picked back up on the django work and I have the following problems:
+* having a really tough time learning how to include the useful things in the typepadapp (django) like template filters or objects
+* it doesn't make sense to go from js -> django -> js again.  should just parse the json directly although it's complicated.  at least django templating is giving me practice and helping me learn the json object formats.
