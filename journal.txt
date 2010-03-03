@@ -89,3 +89,22 @@ Tested the MostRecc plugin in TPM's env and deployed in the evening.
 Picked back up on the django work and I have the following problems:
 * having a really tough time learning how to include the useful things in the typepadapp (django) like template filters or objects
 * it doesn't make sense to go from js -> django -> js again.  should just parse the json directly although it's complicated.  at least django templating is giving me practice and helping me learn the json object formats.
+
+[10] 03/02/10
+
+Got the javascript parsing html+js to work!  No Django is involved, but the groups/<xid>.js template is useful for faster css styling since it's not my strong suit.  To pick up where I left off:
+	cp django_frontend/another_site.html /Library/WebServer/Documents/
+	cp django_frontend/typepad_parsing.js /Library/WebServer/Documents
+then view 
+	http://localhost/another_site.html 
+to make sure the most recent 5 events appear on the page.
+
+LEFT TO DO:
+	* clean up the styling of the widget to make it a little bit more presentable
+	* replace the (untitled entries) with the entry body truncated
+	* create the django wrapper for easy html inserts/badging.
+	
+Handy Links:
+	http://developer.yahoo.com/common/json.html -- Examples with javascript and json using the Yahoo api
+	http://www.flickr.com/services/api/response.json.html -- flick API usage with js and json
+	
