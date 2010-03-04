@@ -99,6 +99,8 @@ then view
 	http://localhost/another_site.html 
 to make sure the most recent 5 events appear on the page.
 
+AT WORK, I successfully got Tumblelog running on my local machine. It's another application that accesses the TypePad API, but it links to the BlogAPI's instead of the Group API's like Motion does.  Pretty exciting!
+
 LEFT TO DO:
 	* clean up the styling of the widget to make it a little bit more presentable
 	* replace the (untitled entries) with the entry body truncated
@@ -108,3 +110,20 @@ Handy Links:
 	http://developer.yahoo.com/common/json.html -- Examples with javascript and json using the Yahoo api
 	http://www.flickr.com/services/api/response.json.html -- flick API usage with js and json
 	
+
+[11] 03/03/10
+
+Another day of Javascript + CSS styling, and I'm starting to get somewhere.  
+
+CHALLENGES:
+	I'm having a hard time creating JS objects that have a format like this:
+	<p>
+		<a class="whatever" href="http://profile.typepad.com/nataliepo">nataliepo</> recently posted a photo to <a href="http://www.mmmeow.com">mmmeow</a>
+	</p>
+	so I keep nesting divs and objects by the appendChild() method.  I though innerHTML() would work but it does not.  
+	
+LEFT TO DO:
+	* continue cleaning up the widget
+	* create the django wrapper for easy html inserts but this is still a long ways off.  creating individual html tags via javascript is a real pain in the ass. i wish i could use the django templating.
+	* add a basic header and footer
+	* figure out how to parse a timestamp of "2010-03-04T02:43:59Z" in javascript using relative dates (ie Posted Yesterday)
