@@ -127,3 +127,33 @@ LEFT TO DO:
 	* create the django wrapper for easy html inserts but this is still a long ways off.  creating individual html tags via javascript is a real pain in the ass. i wish i could use the django templating.
 	* add a basic header and footer
 	* figure out how to parse a timestamp of "2010-03-04T02:43:59Z" in javascript using relative dates (ie Posted Yesterday)
+	
+	
+[12] 03/04/10
+
+To avoid yesterday's challenge, I ended up getting tricky with divs and hrefs.  Instead of doing:
+	<p>
+		<a class="whatever" href="http://profile.typepad.com/nataliepo">nataliepo</a> recently posted a photo
+	</p>
+
+I wrapped that naked text in a <a> tag.  I also put it in a <span> in another place.
+<p>
+	<a class="whatever" href="http://profile.typepad.com/nataliepo">nataliepo</> <a class="whatever-else" href="http://mmmeow.com/post/23423058">recently posted a photo</a>
+</p>
+	
+TODAY I:
+	* natalified the style (see screenshot folder in today's commit here: http://github.com/nataliepo/Twidget/commit/2edf4849a669ec4d859c481a33d7c067311aa3b8. yikes!)
+	
+CHALLENGES:
+	* The name, group image, group description, and the root URL of the Motion site isn't in the events.json feed.  
+	* I gave up on the timestamp parsing. 
+	* I swapped out mmmeow's XID with Avatar's and the widget doesn't work. :( Don't know why yet.
+	
+STILL NEED TO DO:
+	* Figure out why Avatar's XID doesn't work with the group.
+	* Avoid hard-coding too many style elements in the Javascript.
+	* Style 9-11 on my widget!
+	
+	
+
+
