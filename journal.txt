@@ -144,6 +144,8 @@ I wrapped that naked text in a <a> tag.  I also put it in a <span> in another pl
 TODAY I:
 	* natalified the style (see screenshot folder in today's commit here: http://github.com/nataliepo/Twidget/commit/2edf4849a669ec4d859c481a33d7c067311aa3b8. yikes!)
 	
+	* fixed my ~/.gitconfig file to use email address npodrazik@sixapart.com rather than npodrazik@gmail.com because my commits weren't being properly attributed to my user :(.  I was seeing things committed by "Natalie Podrazik" and some things committed by "nataliepo" with a link to my github profile.  Hopefully this change will make it 100% consistent from my home laptop from now on.
+	
 CHALLENGES:
 	* The name, group image, group description, and the root URL of the Motion site isn't in the events.json feed.  
 	* I gave up on the timestamp parsing. 
@@ -155,5 +157,51 @@ STILL NEED TO DO:
 	* Style 9-11 on my widget!
 	
 	
+[13] 03/05/10
+
+Figured out why the Avatar widget isn't working.  Turns out I had the wrong XID!
+
+* Testing the widget anyway to see what issues crop up, and the first is that unicode chars in the api endpoints aren't treated very nicely.  I think Motion cleans them up when rendered.  See example:
+
+	"displayName" : "Ã€n'driÃ©",
+
+in API endpoint but on the front page of Avatar, that user's display name shows up as:
+
+  	Àn'drié  posted 
+
+and in the source, it looks like:
+
+	<span class="vcard author"><a href="/members/halmsta">Àn&#39;drié</a></span> posted
+	
+BUT(!!) putting 
+	<meta name="http-equiv" content="Content-type: text/html; charset=UTF-8"/>) 
+in the header corrects the problem.  Cool.
+
+
+* I should put a TypePad logo on everything that I do.
+
+<< Weird Errors >>
+100s of JS errors on every Motion site:
+document.all.tags is not a function
+	http://www.iconico.com/CSSScrollbar/CSS.js
+	var objColl = document.all.tags('Input'); 
+	Line 45
+But I cleared my cookies and restarted FF and they went away.  Weird.
+
+* I need to wrap up for the evening since I just spent 20min debugging and it was because I defined a function twice.
+
+CHALLENGES:
+	* Hard to find a Motion group's XID.  Should this be publicly available?
+
+STILL NEED TO DO:
+	* Get the favorite stars appearing on the site like the comment bubbles are
+	* style 9-11 (floating content over images, yuck!)
+	* put a "powered by typepad" footer on everything
+	* start to toy around with the django interface to pick colors and background
+	** abstract out current code into regular html
+	
+
+
+
 
 
