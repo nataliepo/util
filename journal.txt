@@ -203,5 +203,34 @@ STILL NEED TO DO:
 
 
 
+[14] 03/06/10
 
+Today I'd like to put Tydget in a place where a designer can ACTUALLY HELP IT.  
+Goals:
+ X add a footer div that links to www.typepad.com for the Powered By logo
+ X name the widget elements consistently instead of erratically!
+    This is super important because the local css elements clash with the site's defined elements.  I'm going to prepend all classes and id's with "tydget-" for clarity.
+ O clean up the sloppy css examples
+    I need to spend less time mucking in css because it's a huge timesuck.  The important thing is to build out the essential HTML elements with sane class labels so somebody else can make it look good. :)
+    
+BUGS:
+    X nywbc has a user with a blank display name.  Fixed it to return "A Member" when no actor.displayName.
+    _ i have two divs with id="tydget"!  
+    
+NOTES:
+    Put the NYWBC on nataliepo.com as a test: http://www.nataliepo.com/nywbc.html .  Some of the html elements were overriden (including link rollover on the title--it's bright pink!).  But it works.
+    Also put it on http://nataliepo.typepad.com/ .
+
+
+CHALLENGES:
+    * it's hard to specify how many characters should appear in the div because the # of lines is dependent on the styled fontsize.  Maybe I should just stick to the Twitter standard of 140max (username + action + object + title_str), or exclude username from that requirement?
+    
+LEFT TO DO:
+    * get some raw HTML to work with
+    * start the django color picker interface. (wasted too much time on css details today to work on that.)
+
+
+
+
+ 
 
