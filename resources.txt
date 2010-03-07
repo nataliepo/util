@@ -1,3 +1,4 @@
 http://www.w3.org/TR/CSS2/box.html -- the 'box' description when using css element #inneedofstyle911
 
 
+http://docs.djangoproject.com/en/dev/ref/templates/api/ - mondo helpful for front-end django templating

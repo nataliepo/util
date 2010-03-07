@@ -226,11 +226,24 @@ CHALLENGES:
     * it's hard to specify how many characters should appear in the div because the # of lines is dependent on the styled fontsize.  Maybe I should just stick to the Twitter standard of 140max (username + action + object + title_str), or exclude username from that requirement?
     
 LEFT TO DO:
-    * get some raw HTML to work with
-    * start the django color picker interface. (wasted too much time on css details today to work on that.)
+    X get some raw HTML to work with
+    X start the django color picker interface. (wasted too much time on css details today to work on that.)
 
+-- round 2
 
-
-
+* I always forget how to update my $PATH environment variable.  it's export PATH=$PATH:/usr/local/mysql/bin/ for mysql.
  
+IDEA: would be cool to implement an ajax chat using typepad auth: http://pythonhaven.wordpress.com/tag/django/
 
+Attempting to implement a simple color picker on django based on this reference: http://www.djangosnippets.org/snippets/1261/ ...
+
+-- made really good progress on the color picker.  even made some custom classes in django to help with those efforts!
+
+CHALLENGES:
+    - I don't know how to make a custom template tag.
+    
+LEFT TO DO:
+    _ further the style picker doohickey
+    _ get a designer to look over html to get ideas for class elements 
+    _ try to make a preview?
+    _ Split these projects into two separate things.  Style911 should be its own github proj, although its being used to generate Tydget style elements.
