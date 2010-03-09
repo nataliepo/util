@@ -1,4 +1,6 @@
-[1] 02/21/10
+/***************
+ * [1] 02/21/10
+ ****************/
 
 * downloaded WP 2.9.2
 
@@ -25,7 +27,10 @@ IDEAS:
 * making my nataliepo.com serve content directly out of a typepad blog
 
 
-[2] 02/22/10
+/***************
+ * [2] 02/22/10
+ ****************/
+ 
 * starting in the AM to investigate how the Twitter sidebar widget was created.
 * started a github project called 'Tydget' for a Typepad Widget as a sidebar.
 
@@ -50,15 +55,21 @@ Found a resource (http://pkarl.com/articles/how-we-built-feed-apart-using-django
 
 Also useful: http://uswaretech.com/blog/2009/02/how-we-built-a-twitter-application/
 
-[3] 2/23/10
+/***************
+ * [3] 2/23/10
+ ****************/
+ 
 << MISSING NOTES >>
 
-[4] 2/24/10
+/***************
+ * [4] 2/24/10
+ ****************/
+
 << MISSING NOTES >>
 
-[5] 2/25/10
-
-2/25/10
+/***************
+ * [5] 2/25/10
+ ****************/
 
 OPEN QUESTIONS:
 
@@ -70,19 +81,28 @@ typepad_api_url = 'http://api.typepad.com/groups/%s/events.json?max-results=5&st
 
 pulls only 5 events from mmmeow. Why?
 
-[6] 2/26/10
+/***************
+ * [6] 2/26/10
+ ****************/
+ 
 << MISSING ENTRY >>
 
 
-[7] 2/27/10
-
+/***************
+ * [7] 2/27/10
+ ****************/
+ 
 This day went to TPM to write the MostRecc plugin to avoid costly sql queries for most recent favorites over thousands of blogs in one category
 
-[8] 2/28/10
+/***************
+ * [8] 2/28/10
+ ****************/
 
 Continued TPM work and a good-bye party for Tracie and Wayne. :(
 
-[9] 03/01/10
+/***************
+ * [9] 03/01/10
+ ****************/
 
 Tested the MostRecc plugin in TPM's env and deployed in the evening.  
 
@@ -90,7 +110,9 @@ Picked back up on the django work and I have the following problems:
 * having a really tough time learning how to include the useful things in the typepadapp (django) like template filters or objects
 * it doesn't make sense to go from js -> django -> js again.  should just parse the json directly although it's complicated.  at least django templating is giving me practice and helping me learn the json object formats.
 
-[10] 03/02/10
+/***************
+ * [10] 03/02/10
+ ****************/
 
 Got the javascript parsing html+js to work!  No Django is involved, but the groups/<xid>.js template is useful for faster css styling since it's not my strong suit.  To pick up where I left off:
 	cp django_frontend/another_site.html /Library/WebServer/Documents/
@@ -111,7 +133,9 @@ Handy Links:
 	http://www.flickr.com/services/api/response.json.html -- flick API usage with js and json
 	
 
-[11] 03/03/10
+/***************
+ * [11] 03/03/10
+ ****************/
 
 Another day of Javascript + CSS styling, and I'm starting to get somewhere.  
 
@@ -129,7 +153,9 @@ LEFT TO DO:
 	* figure out how to parse a timestamp of "2010-03-04T02:43:59Z" in javascript using relative dates (ie Posted Yesterday)
 	
 	
-[12] 03/04/10
+/***************
+ * [12] 03/04/10
+ ****************/
 
 To avoid yesterday's challenge, I ended up getting tricky with divs and hrefs.  Instead of doing:
 	<p>
@@ -157,7 +183,9 @@ STILL NEED TO DO:
 	* Style 9-11 on my widget!
 	
 	
-[13] 03/05/10
+/***************
+ * [13] 03/05/10
+ ****************/
 
 Figured out why the Avatar widget isn't working.  Turns out I had the wrong XID!
 
@@ -200,10 +228,10 @@ STILL NEED TO DO:
 	* start to toy around with the django interface to pick colors and background
 	** abstract out current code into regular html
 	
-
-
-
-[14] 03/06/10
+	
+/***************
+ * [14] 03/06/10
+ ****************/
 
 Today I'd like to put Tydget in a place where a designer can ACTUALLY HELP IT.  
 Goals:
@@ -243,7 +271,48 @@ CHALLENGES:
     - I don't know how to make a custom template tag.
     
 LEFT TO DO:
-    _ further the style picker doohickey
+    X further the style picker doohickey
     _ get a designer to look over html to get ideas for class elements 
     _ try to make a preview?
-    _ Split these projects into two separate things.  Style911 should be its own github proj, although its being used to generate Tydget style elements.
+    X Split these projects into two separate things.  Style911 should be its own github proj, although its being used to generate Tydget style elements.
+    
+/***************
+ * [15] 03/07/10
+ ****************/
+IDEAS FOR TODAY:
+* Separate Tydget from the Style911 project (and think of a less silly name)
+* Make a mode of Tydget that just echoes a plain html example.  This is mondo useful for previews in Style911 and actual design advice as to which HTML elements I should change.
+
+* Ugh! Using JS to appendChild and modify elements is such a pain in the ass. I tried to just set the innerHTML of the div id=tydget and that works SO MUCH EASIER.  Never going back to that appendChild garbage.
+** even a simplified way:
+function outer_div_setup(obj) {
+    
+    return '<div id="tydget">  \n' +    
+'   <div id="tydget" class="tydget"> \n' + 
+'       <div id="tydget-body" class="tydget-body">  \n' +
+'           <div class="tydget-header-div"> \n' + 
+'               <div class="tydget-header-precursor"> \n' + 
+'                   recently on \n' + 
+'               </div>\n' + 
+'               <a class="tydget-header-title" href="' + 
+get_site_url(obj.permalinkUrl) + 
+'">' + 
+get_site_name(obj.permalinkUrl) + 
+'</a> \n' +
+'           </div>  \n';
+    
+}
+
+Doesn't work well for looping.  Trying this out in django now.
+* This has to be in JS, so Django doesn't really solve the problem.   The above format is the best I can get for now. :(  Might write another service that can just split out the HTML produced to help with the debugging, but I don't have high hopes for super clean js code.
+
+CHALLENGE:
+* There isn't a motion-site-specific profile URL in the events.json feed -- just a link for the universal TypePad profile
+
+PROGRESS:
+    Cleaned up much of the Tydget directory and wrote concise directions.  Split out the front-end styler as a new github project ('Stylist'). 
+
+TO DO:
+    _ make Stylist consume a settings file with predefined html elements and the type of things that can be styled.  It's not useful to hard code just the elements that Tydget will need, especially because I expect them to change.
+    _ use one of the Tydget examples for critical elements
+    _ also enable default style elements (sometimes elements should always have padding and margins and users shouldn't have to specify that, etc)
