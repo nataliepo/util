@@ -316,3 +316,48 @@ TO DO:
     _ make Stylist consume a settings file with predefined html elements and the type of things that can be styled.  It's not useful to hard code just the elements that Tydget will need, especially because I expect them to change.
     _ use one of the Tydget examples for critical elements
     _ also enable default style elements (sometimes elements should always have padding and margins and users shouldn't have to specify that, etc)
+
+
+/***************
+ * [16] 03/08/10
+ ****************/
+Getting sloppy with my journal commits.....
+
+SHORT CODING DAY TODAY:
+	X make Stylist slurp in a JSON feed specifying objects to present as an alternative to the list that initialize_form_data() builds now.
+	X avoid getting too caught up in css details because its a time waster
+
+NOTE TO SELF: the last item in a JSON list cannot have a comma.
+
+TO DO TOMORROW:
+	* clean up json feed.  
+
+	{
+        "obj" : {
+            "input_id" : "font_family", 
+            "label": "Font",
+            "type" : "text",
+            "value" : "\"Helvetica Neue\", Arial, Verdana",
+            "css_class_name": "font-family"
+        },
+        "section" : "tydget",
+        "can_customize" : 0
+
+    },
+
+	is sloppy.  should be something like:
+	section : [
+		{
+			obj: {
+				label: Font,
+				/* -- build this to be section+class_name  
+				  id: font-family,
+				*/
+				value: Helvetica,
+				class_name: font-family
+				can_customize: 0,
+
+			}
+		}
+	]
+
