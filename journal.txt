@@ -361,3 +361,17 @@ TO DO TOMORROW:
 		}
 	]
 
+/***************
+ * [17] 03/09/10
+ ****************/
+Sat with @liz tonight and she worked through some css for a vanilla Tydget example!  yey!  Now:
+  _ using her css as an example input
+  _ cleaning up the json input for the feed
+
+BUGS:
+    _ !important in css is not respected. may need to flag it as another field.
+    _ when can_customize=0, the <div class="hidden" preserves line height instead of just appearing without a display. all items are set to can_customize=1.
+    _ colors like #aaa are not appearing as color pickers -- text only. i think its something wrong with the spaces in those class names breaking in the json picker, ex: "tydget-fav-div a" which generates  $('#tydget-fav-div a-color').colorPicker(); .
+    _ i defined a new variable in the TydgetField object in models.py (self.element) in the constructor, but I didn't declare him in the model itself.  Wonder if that will be a problem soon?
+    
+ 
