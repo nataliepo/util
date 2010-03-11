@@ -375,3 +375,23 @@ BUGS:
     _ i defined a new variable in the TydgetField object in models.py (self.element) in the constructor, but I didn't declare him in the model itself.  Wonder if that will be a problem soon?
     
  
+/***************
+ * [18] 03/10/10
+ ****************/
+
+picking up on yesterday's bugs:
+	X !important in css is not respected. may need to flag it as another field.
+    X when can_customize=0, the <div class="hidden" preserves line height instead of just appearing without a display. all items are set to can_customize=1.
+	X colors like #aaa are not appearing as color pickers -- text only. i think its something wrong with the spaces in those class names breaking in the json picker, ex: "tydget-fav-div a" which generates  $('#tydget-fav-div a-color').colorPicker(); .
+	
+	_ wrap all of this in the following steps:
+	1. Choose Motion Site
+	2. Copy and Paste This into your website.
+	
+	x update ReadMe to reflect current state of project
+	_ remove unnecessary references to Tydget in Stylist
+	_ debug live preview.
+	__ colors don't match
+	__ all links are blue
+Wrap this up by the weekend.  I'm tired of styles! :D
+ 
