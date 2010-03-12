@@ -395,3 +395,28 @@ picking up on yesterday's bugs:
 	__ all links are blue
 Wrap this up by the weekend.  I'm tired of styles! :D
  
+
+
+/***************
+ * [19] 03/11/10
+ ****************/
+
+I should use nested templates or something because I have two different presentations of the same data: the resulting css, and the in-line css that styles the preview.  
+
+X try render_to_string() shortcut
+X debug live preview.
+XX colors don't match
+XX all links are blue
+#tydget{ 
+   font-family: 13px;
+   color: 13px;
+   width: 13px;
+   font-size: 13px;
+} --form post bug! (FIXED)
+
+_ remove unnecessary references to Tydget in Stylist
+_ add dropdown support (especially for fonts)
+_ add image url support
+_ motion site dropdown and tie-in with tydget form code.
+
+too tired to pick these up!
