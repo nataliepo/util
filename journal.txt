@@ -56,19 +56,19 @@ Found a resource (http://pkarl.com/articles/how-we-built-feed-apart-using-django
 Also useful: http://uswaretech.com/blog/2009/02/how-we-built-a-twitter-application/
 
 /***************
- * [3] 2/23/10
+ *  2/23/10
  ****************/
  
 << MISSING NOTES >>
 
 /***************
- * [4] 2/24/10
+ *  2/24/10
  ****************/
 
 << MISSING NOTES >>
 
 /***************
- * [5] 2/25/10
+ * [3] 2/25/10
  ****************/
 
 OPEN QUESTIONS:
@@ -82,26 +82,26 @@ typepad_api_url = 'http://api.typepad.com/groups/%s/events.json?max-results=5&st
 pulls only 5 events from mmmeow. Why?
 
 /***************
- * [6] 2/26/10
+ *  2/26/10
  ****************/
  
 << MISSING ENTRY >>
 
 
 /***************
- * [7] 2/27/10
+ * [4] 2/27/10
  ****************/
  
 This day went to TPM to write the MostRecc plugin to avoid costly sql queries for most recent favorites over thousands of blogs in one category
 
 /***************
- * [8] 2/28/10
+ * [5] 2/28/10
  ****************/
 
 Continued TPM work and a good-bye party for Tracie and Wayne. :(
 
 /***************
- * [9] 03/01/10
+ * [6] 03/01/10
  ****************/
 
 Tested the MostRecc plugin in TPM's env and deployed in the evening.  
@@ -111,7 +111,7 @@ Picked back up on the django work and I have the following problems:
 * it doesn't make sense to go from js -> django -> js again.  should just parse the json directly although it's complicated.  at least django templating is giving me practice and helping me learn the json object formats.
 
 /***************
- * [10] 03/02/10
+ * [7] 03/02/10
  ****************/
 
 Got the javascript parsing html+js to work!  No Django is involved, but the groups/<xid>.js template is useful for faster css styling since it's not my strong suit.  To pick up where I left off:
@@ -134,7 +134,7 @@ Handy Links:
 	
 
 /***************
- * [11] 03/03/10
+ * [8] 03/03/10
  ****************/
 
 Another day of Javascript + CSS styling, and I'm starting to get somewhere.  
@@ -154,7 +154,7 @@ LEFT TO DO:
 	
 	
 /***************
- * [12] 03/04/10
+ * [9] 03/04/10
  ****************/
 
 To avoid yesterday's challenge, I ended up getting tricky with divs and hrefs.  Instead of doing:
@@ -184,7 +184,7 @@ STILL NEED TO DO:
 	
 	
 /***************
- * [13] 03/05/10
+ * [10] 03/05/10
  ****************/
 
 Figured out why the Avatar widget isn't working.  Turns out I had the wrong XID!
@@ -230,7 +230,7 @@ STILL NEED TO DO:
 	
 	
 /***************
- * [14] 03/06/10
+ * [11] 03/06/10
  ****************/
 
 Today I'd like to put Tydget in a place where a designer can ACTUALLY HELP IT.  
@@ -277,7 +277,7 @@ LEFT TO DO:
     X Split these projects into two separate things.  Style911 should be its own github proj, although its being used to generate Tydget style elements.
     
 /***************
- * [15] 03/07/10
+ * [12] 03/07/10
  ****************/
 IDEAS FOR TODAY:
 * Separate Tydget from the Style911 project (and think of a less silly name)
@@ -319,7 +319,7 @@ TO DO:
 
 
 /***************
- * [16] 03/08/10
+ * [13] 03/08/10
  ****************/
 Getting sloppy with my journal commits.....
 
@@ -362,7 +362,7 @@ TO DO TOMORROW:
 	]
 
 /***************
- * [17] 03/09/10
+ * [14] 03/09/10
  ****************/
 Sat with @liz tonight and she worked through some css for a vanilla Tydget example!  yey!  Now:
   _ using her css as an example input
@@ -376,7 +376,7 @@ BUGS:
     
  
 /***************
- * [18] 03/10/10
+ * [15] 03/10/10
  ****************/
 
 picking up on yesterday's bugs:
@@ -398,7 +398,7 @@ Wrap this up by the weekend.  I'm tired of styles! :D
 
 
 /***************
- * [19] 03/11/10
+ * [16] 03/11/10
  ****************/
 
 I should use nested templates or something because I have two different presentations of the same data: the resulting css, and the in-line css that styles the preview.  
@@ -423,9 +423,11 @@ too tired to pick these up!
 
 
 /***************
- * [20] 03/12/10
+ * [17] 03/12/10
  ****************/
  
- _ reformat Stylist json to respect section names and hierarchy
- _ make labels as comments in final css
- 
+ X reformat Stylist json to respect section names and hierarchy
+ O make labels as comments in final css
+    tired of fiddling with the output here. want more good css before I proceed.
+
+Studied up on OAuth process today (http://www.slideshare.net/leahculver/o-auth-oembednyc09). Next: step through code examples where it works.
