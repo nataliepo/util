@@ -420,3 +420,12 @@ _ add image url support
 _ motion site dropdown and tie-in with tydget form code.
 
 too tired to pick these up!
+
+
+/***************
+ * [20] 03/12/10
+ ****************/
+ 
+ _ reformat Stylist json to respect section names and hierarchy
+ _ make labels as comments in final css
+ 
