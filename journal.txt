@@ -431,3 +431,39 @@ too tired to pick these up!
     tired of fiddling with the output here. want more good css before I proceed.
 
 Studied up on OAuth process today (http://www.slideshare.net/leahculver/o-auth-oembednyc09). Next: step through code examples where it works.
+
+/***************
+ *  03/13/10
+ ****************/
+ The day was full of apartment nesting, desk purchasing, and desk assembling. No coding.
+ 
+ 
+ /***************
+  * [18] 03/14/10 - Pi Day!
+  ****************/
+O Abstract Tydget code into a useful library
+    - you can't include JS code in a JS file. what a pia.
+    - not doing this afterall.  will think about this later on
+_ Make progress on Rousseau
+    X making an index to list entries based on a blog XID kept in configs
+    O MAKE COMMENTING WORK.
+    X add favorites to entry listing
+    X separate author objects into its own class
+    
+< break > 
+One hour of coding and then I will write a Hobbit post.  11:15, timer set!
+
+QUESTIONS:
+    - Is there an XID-reflection endpoint?  like: 
+        <XID> "IS A" (blog, author, motion group, asset, etc)
+    
+NEED TO DO:
+    - write unit tests for these php methods?
+
+NEXT UP:
+    _ Get sessions to work.
+    _ Get commenting to work
+    _ Add timestamps to entries
+    _ add timestamps to comments (including FB)
+    _ fold comments into one string
+    
