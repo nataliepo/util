@@ -461,9 +461,19 @@ NEED TO DO:
     - write unit tests for these php methods?
 
 NEXT UP:
-    _ Get sessions to work.
-    _ Get commenting to work
-    _ Add timestamps to entries
+    O Get sessions to work.
+    O Get commenting to work
+    --> Use TPConnect in place of another commenting mechanism.
+    X Add timestamps to entries
     _ add timestamps to comments (including FB)
     _ fold comments into one string
+    _ Auto-cross post MT content into the Braided stream
+    _ format comment forms to look better 
+        _ don't cluge userpic
+        _ reduce height of submit box
+    _ make post look like stream data
+    _ Should we enforce that only fans can post comments?
+    _ Get MT Posts tied to TypePad XID posts so that users can comment on those threads.
+    
+
     
