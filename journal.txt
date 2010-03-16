@@ -465,8 +465,8 @@ NEXT UP:
     O Get commenting to work
     --> Use TPConnect in place of another commenting mechanism.
     X Add timestamps to entries
-    _ add timestamps to comments (including FB)
-    _ fold comments into one string
+    X add timestamps to comments (including FB)
+    X fold comments into one string
     _ Auto-cross post MT content into the Braided stream
     _ format comment forms to look better 
         _ don't cluge userpic
@@ -475,5 +475,7 @@ NEXT UP:
     _ Should we enforce that only fans can post comments?
     _ Get MT Posts tied to TypePad XID posts so that users can comment on those threads.
     
+<break>
+http://us2.php.net/manual/en/function.date.php is useful for showing the php date flags.
 
     
