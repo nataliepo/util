@@ -468,14 +468,46 @@ NEXT UP:
     X add timestamps to comments (including FB)
     X fold comments into one string
     _ Auto-cross post MT content into the Braided stream
-    _ format comment forms to look better 
-        _ don't cluge userpic
-        _ reduce height of submit box
-    _ make post look like stream data
+    O format comment forms to look better 
+        O don't cluge userpic
+        X reduce height of submit box
+        --> Need CSS help.
+    X make post look like stream data
     _ Should we enforce that only fans can post comments?
-    _ Get MT Posts tied to TypePad XID posts so that users can comment on those threads.
+    X Get MT Posts tied to TypePad XID posts so that users can comment on those threads.
+    O Fix timestamps on form since we can't use PHP's DateTime
     
 <break>
 http://us2.php.net/manual/en/function.date.php is useful for showing the php date flags.
 
-    
+/***************
+ * [19] 03/15/10
+ ****************/    
+ More Rousseau today and my notes bled into yesterday's notes.
+ 
+/***************
+ * [20] 03/16/10
+ ****************/
+ More Rousseau today and my notes bled into Day [18]'s notes.
+ 
+/***************
+ * [21] 03/17/10
+ ****************/
+ More Rousseau today and my notes bled into Day [18]'s notes.
+ 
+ TO DO
+   _ set up iPhone SDK on home laptop
+   _ renew dev membership
+   _ Rousseau Documentation
+      _ run through FBApp docs again
+      _ document how to use Rousseau and Braided
+   _ Tydget
+      _ write usage documentation
+      _ clean up code, write more comments
+      _ write code documentation
+   _ Stylist
+      _ get this in a shipping state!
+      
+
+ 
+ 
