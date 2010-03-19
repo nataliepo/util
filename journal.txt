@@ -510,4 +510,26 @@ http://us2.php.net/manual/en/function.date.php is useful for showing the php dat
       
 
  
- 
+/***************
+ * [21] 03/17/10
+ ****************/ 
+Today's goals:
+   _ Clarify the demos for Braided
+      _ TypePad Blog Content hosted off of the Typepad Blog.
+      _ MT Blog using TPConnect comments hosted on MT
+      _ Tag code and host it on a dev server.
+   _ Rousseau Documentation
+      _ run through FBApp docs again
+      _ document how to use Rousseau and Braided
+
+
+/***************
+ * [22] 03/18/10
+ ****************/   
+Several more changes today.  Unfortunately, DateTime not available in php 5.1, so I wrote a really lame TPDate class as a replacement.
+
+
+/***************
+ * [23] 03/19/10
+ ****************/
+Redesign of Rousseau (Server) and Claire (Client) today.  Implementation to follow; notes kept separately.
