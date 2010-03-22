@@ -533,3 +533,23 @@ Several more changes today.  Unfortunately, DateTime not available in php 5.1, s
  * [23] 03/19/10
  ****************/
 Redesign of Rousseau (Server) and Claire (Client) today.  Implementation to follow; notes kept separately.
+
+/***************
+ *  03/20/10
+ ****************/
+ NO UPDATE
+ 
+/***************
+ * [24] 03/21/10
+ ****************/
+ Continued with Rousseau and Claire; notes kept separately.
+ 
+/***************
+ * [25] 03/22/10
+ ****************/
+ R+C continued. to do:
+  _ standardize table names
+  _ clean up object model
+  _ diagram components
+  _ figure out why FB App data doesn't show up for me towards EOD.  overuse?
+  
