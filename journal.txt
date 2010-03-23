@@ -1,4 +1,4 @@
-/***************
+ /***************
  * [1] 02/21/10
  ****************/
 
@@ -565,11 +565,12 @@ Redesign of Rousseau (Server) and Claire (Client) today.  Implementation to foll
  * [25] 03/22/10
  ****************/
  R+C continued. to do:
-  _ standardize table names
-  _ clean up object model
+  X standardize table names
+  X clean up object model
   _ diagram components
-  _ figure out why FB App data doesn't show up for me towards EOD.  overuse?
+  O figure out why FB App data doesn't show up for me towards EOD.  overuse?
   --> works fine from home.  likely has a throttler for my account :(
+  --> yes, i think i'm being throttled.  skip this for now.
 
 GOAL:
    X get local php example that requests comments up and running
@@ -581,4 +582,11 @@ GOAL:
 THOUGHTS/CHALLENGES:
    - Each site that wants to use the Rousseau server has to has its own FB Application, and therefore, its own set of FB api keys/secrets.  --> it should be stored with the rousseau site list.
    
+   
+/***************
+ * [26] 03/23/10
+ ****************/
+TO DO:
+   * enabled pushing of arbitrary URL/XID/BLOG_XID again
+   * (only display FB Content if a row has a site_id; key off same domain for now?)
    
