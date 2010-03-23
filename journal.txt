@@ -521,6 +521,23 @@ Today's goals:
    _ Rousseau Documentation
       _ run through FBApp docs again
       _ document how to use Rousseau and Braided
+      More Rousseau today and my notes bled into Day [18]'s notes.
+
+      TO DO
+        O set up iPhone SDK on home laptop
+           --> SDK is for snow leopard :(
+
+        _ renew dev membership
+        _ Rousseau Documentation
+           _ run through FBApp docs again
+           _ document how to use Rousseau and Braided
+        _ Tydget
+           _ write usage documentation
+           _ clean up code, write more comments
+           _ write code documentation
+        _ Stylist
+           _ get this in a shipping state!
+      
 
 
 /***************
@@ -552,4 +569,16 @@ Redesign of Rousseau (Server) and Claire (Client) today.  Implementation to foll
   _ clean up object model
   _ diagram components
   _ figure out why FB App data doesn't show up for me towards EOD.  overuse?
+  --> works fine from home.  likely has a throttler for my account :(
+
+GOAL:
+   X get local php example that requests comments up and running
+      -- PROBLEM: my fb requests don't work every time. Investigate FB Error codes.
+   O make a simple javascript example
+   O clean up code!
+   
   
+THOUGHTS/CHALLENGES:
+   - Each site that wants to use the Rousseau server has to has its own FB Application, and therefore, its own set of FB api keys/secrets.  --> it should be stored with the rousseau site list.
+   
+   
