@@ -589,4 +589,10 @@ THOUGHTS/CHALLENGES:
 TO DO:
    * enabled pushing of arbitrary URL/XID/BLOG_XID again
    * (only display FB Content if a row has a site_id; key off same domain for now?)
-   
+
+
+/***************
+ * [27] 03/24/10
+ ****************/   
+ (((((( Ada Lovelace Day ))))))
+ 
