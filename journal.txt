@@ -596,3 +596,8 @@ TO DO:
  ****************/   
  (((((( Ada Lovelace Day ))))))
  
+* blogged for ALD
+* Got the Rousseau/Claire demo in a stable place for demoing Comments.
+* NEED TO CONFIRM:
+** PUSH of new FB entry data works.
+** DISPLAY of existing FB entry data works.
