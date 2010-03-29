@@ -670,3 +670,23 @@ OTHER INTERESTING THINGS LEARNED:
       - the WWW:TypePad implementation provides a callback parameter but its request parameters indicate that the version of OAuth is 1.0
       - Google's PHPOAuth library hard coded its version to be 1.0 and throws an error if you relabel it as 1.0a.  
       - Nothing breaks at this stage when I don't include it, but I'm modeling my requests to be the same as the successful WWW:TypePad example, so it's too early to deviate.
+
+   * The oauth_token returned just before you make the request for the AccessToken is a long string.
+   Too long for the php library!
+   eaa4457b96bf7a675d3a5cf52839c9dd7efcb76a21bbf59687962d0b0b48f5106feef2416d95f5a5a3b35a8faa48884ed763bb411e6f52a27499ddbae8dfedfa
+   I had to modify the schema to allow for 170 characters.
+      mysql> alter table oauth_consumer_token change oct_token oct_token varchar(170);
+      
+Got to the point where I *think* I'm authenticated, but I need to prove it with an authenticated request.  Having a hard time formulating the headers described here:
+   http://oauth.net/core/1.0a/
+Don't know how to make a request according to the directions...
+"Once an application has obtained 
+      X an OAuth token and 
+      X secret for a user 
+   it may use these as credentials to make authenticated requests on behalf of that user. Authenticated requests are made via an encrypted channel to https://api.typepad.com/. Anonymous requests are not allowed to the SSL endpoints. 
+
+   The OAuth credentials must be provided via a WWW-Authenticate HTTP request header whose scheme is OAuth, as described in the OAuth 1.0a specification, section 7. Using the WWW-Authenticate header is required for all endpoints except those few which specifically permit using the query string. 
+   ? OK, API endpoints are using WWW-Authenticate, but how to call them?
+...calling it a night!
+
+
