@@ -601,3 +601,72 @@ TO DO:
 * NEED TO CONFIRM:
 ** PUSH of new FB entry data works.
 ** DISPLAY of existing FB entry data works.
+
+
+/***************
+ * [28] 03/25/10
+ ****************/
+ Several changes to Rousseau today, including a little documentation.
+ 
+/***************
+ * [29] 03/26/10
+ ***************/
+ More Rousseau work.  Demo went OK; talked through its existence with 2 clients.  NEED TO:
+ * update README to provide concise examples
+ * stratify the tp-libraries of Claire code into its own utility php code
+GOAL: Make Claire a set of example Rousseau clients, tp-libraries its own php bundle
+
+* Started working on typepad oauth client today, since TPConnect solution of hiding
+TP-comments won't work in the long term.  
+
+/***************
+ * [30] 03/27/10
+ ***************/
+ Continued with the TypePad OAuth client today with little progress.
+ 
+
+/****************
+ * [31] 03/28/10
+ ****************/
+ Spent a LOT of time on the TypePad OAuth client today and made progress.  In the OAuth dance, I was stuck at the very first step, which was requesting a Request Token from the Provider (TypePad).  I followed the directions for the PHP OAuth client that Google made (available here: http://code.google.com/p/oauth-php/wiki/ConsumerHowTo#OAuth_Consumer - 3Leg) but the TypePad request timed out for reasons unexplained.  I finally ended up installing the WWW::TypePad library and using the Plack server to trace the successful requests for my API Key, and I was formulating my request identical to the successful WWW:TP.  Frustrating.
+ 
+After much more tracing of requests and even probing the Net::OAuth::Simple library, I finally discovered that you should NOT encrypt your initial request for the Request Token.  You should leave it as PLAINTEXT rather than 'HMAC-SHA1'.  AND it should be a simple GET request.  It worked as soon as I stopped using the GooglePHPOAuth library's  
+   $token = OAuthRequester::requestRequestToken(CONSUMER_KEY, $user_id, '', 'GET');
+method and replaced it with:
+
+   $r		= $store->getServer(CONSUMER_KEY, $user_id);
+   $oauth 	= new OAuthRequester($uri, $method, $params);
+   $oauth->setParam('oauth_callback', 'http://127.0.0.1/claire/oauth/omgitworked.php');
+	$oauth->sign($user_id, $r);
+   $final_url = "https://www.typepad.com/secure/services/oauth/request_token?";
+
+   $parameters = array('timestamp', 'callback', 'nonce', 'consumer_key', 
+            'version', 'signature_method', 'signature');
+   foreach ($parameters as $parm) {
+      $final_url .= 'oauth_' . $parm . '=' . $oauth->getParam('oauth_' . $parm) . '&';
+   }
+   $handle = fopen($final_url, "rb");
+   $doc = stream_get_contents($handle);
+   
+which will return something like this:
+
+oauth_token=eaa4457b96bf7a675d3a5cf52839c9ddb2ed89f2855ca984539682ada1e7a7a378f81c9ee1d6a283ace18fbcdadd133340f4bdb1472af67a1fa6a6f1a3e5f395 & 
+   oauth_token_secret=FiFz0dncZugIwSfZ & 
+   oauth_callback_confirmed=true
+
+NEXT STEPS:
+   * continue the OAuth dance with these parameters.  Woo hoo!
+   
+   
+OTHER INTERESTING THINGS LEARNED:
+   RUNNING A PLACK SERVER:
+      (Example file in /Library/Server/Documents/www_typepad/lib/gist_example.psgi)
+      cd into the dir that contains the .psgi file, then run:
+         plackup gist_example.psgi
+      then visit http://127.0.0.1:5000/ in your browser.  Ta-Da!  
+      
+   DIFFERENCES BETWEEN OAUTH 1.0 and 1.0a
+      - 1.0a requires a callback parameter
+      - the WWW:TypePad implementation provides a callback parameter but its request parameters indicate that the version of OAuth is 1.0
+      - Google's PHPOAuth library hard coded its version to be 1.0 and throws an error if you relabel it as 1.0a.  
+      - Nothing breaks at this stage when I don't include it, but I'm modeling my requests to be the same as the successful WWW:TypePad example, so it's too early to deviate.
