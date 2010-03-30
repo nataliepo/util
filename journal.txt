@@ -690,3 +690,20 @@ Don't know how to make a request according to the directions...
 ...calling it a night!
 
 
+/****************
+ * [32] 03/29/10
+ ****************/
+ Got an authenticated request to work, but sending info via HTTP Headers in a PHP curl is tricky.  
+ Next Up: Figuring out how to keep an active session and make requests on behalf of multiple users who have sessions...
+ 
+ 
+ /****************
+  * [33] 03/30/10
+  ****************/
+ A couple of great things today:
+  * Claire's json_encode() and json_decode() core methods arent supported until PHP 5.2.*, so:
+  http://www.epigroove.com/posts/97/how_to_use_json_in_php_4_or_php_5_1_x
+  showed me how to rewrite the method using a local json parsing library without a messy php rebuild. Checked it in and it works. Yey!
+  
+  
+ 
