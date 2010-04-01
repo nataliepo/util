@@ -705,5 +705,17 @@ Don't know how to make a request according to the directions...
   http://www.epigroove.com/posts/97/how_to_use_json_in_php_4_or_php_5_1_x
   showed me how to rewrite the method using a local json parsing library without a messy php rebuild. Checked it in and it works. Yey!
   
-  
+/****************
+ *  03/31/10
+ ****************/  
+ No update today.  
+ 
+/****************
+ * [34] 04/01/10
+ ****************/
+Made a demo of OAuth: http://dev3.apperceptive.com/claire/oauth/ -- which remembers logged in XID's.  Severely need to:
+ * Clean up OAuth code itself -- preferably not working off of the bloated PHP library
+ * make sure session deaths as a result of multiple server keys are avoided -- maybe can do the server adding/deleting smarter in alpha.php?
+ * proxying example for QOTD
+ 
  
