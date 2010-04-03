@@ -719,3 +719,20 @@ Made a demo of OAuth: http://dev3.apperceptive.com/claire/oauth/ -- which rememb
  * proxying example for QOTD
  
  
+ /****************
+  * [35] 04/02/10
+  ****************/
+Found a bug in the OAuthPHP library that I'm using that causes unknown server registry rows.  It's because:
+
+   // in oauth-php-98/library/store/OAuthStoreSQL.php, addServerToken() method:
+   // THIS IS A BUG
+	$ocr_id = $this->query_one('
+				SELECT ocr_id
+				FROM oauth_consumer_registry
+				WHERE ocr_consumer_key = \'%s\'
+				', $consumer_key);
+	It's finding the server based on the consumer key only and is not keying on the user_id.  
+	Changed it to:
+	
+* Demo'd http://dev3.apperceptive.com/claire/ .
+	
