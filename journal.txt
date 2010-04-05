@@ -736,3 +736,19 @@ Found a bug in the OAuthPHP library that I'm using that causes unknown server re
 	
 * Demo'd http://dev3.apperceptive.com/claire/ .
 	
+/****************
+ * [36] 04/03/10
+ ****************/
+ Mostly documentation and code cleanup today. No radical functional changes.
+ 
+/****************
+ * [37] 04/04/10
+ ****************/
+Great progress on Claire today!  Got these major milestones out of the way:
+ X simplified /oauth/ example into a slimmer client example.  Did this by creating a tp-library/tp-oauth.php class to handle the authing.
+ X comment posting works.
+Need to:
+ _ update all files in mt_blog_demo to allow comment posting
+ _ update Rousseau demo to allow comment posting - remove references to TPConnect
+ _ post Favorites.
+ 
